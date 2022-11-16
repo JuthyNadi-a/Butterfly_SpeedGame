@@ -1,0 +1,37 @@
+.overlay {
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(128, 126, 126, 0.948);
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    display: block;
+}
+.gameover_box {
+    position: relative;
+    top: 20vh;
+    left: 20vw;
+    background: linear-gradient(#e9e5d2db, #154756ef);
+    min-height: 50vh;
+    width: 50vw;
+    border-radius: 10px;
+    color: #00475b;
+    padding: 3rem;
+}
+/* #score {
+    color: aliceblue;
+    font-size: 4.5vh;
+    font-weight: 900;
+  } */
+.buttons {
+    display: flex;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}

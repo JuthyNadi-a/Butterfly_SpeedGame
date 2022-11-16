@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato:ital@0;1&family=Montserrat&family=Ms+Madi&family=Mystery+Quest&family=Permanent+Marker&family=Titan+One&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Permanent Marker', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('assets/background.jpeg');
+  min-height: 100vh;
 }
 
 code {
