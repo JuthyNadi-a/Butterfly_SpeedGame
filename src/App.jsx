@@ -18,7 +18,7 @@ class App extends Component {
     circles: [1,2,3,4],
     current: undefined,
     score: 0,
-    speed: 1000,
+    speed: 1500,
     count: 0,
     rounds: 3,
     gameOver:false,
