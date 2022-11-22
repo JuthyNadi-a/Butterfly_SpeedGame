@@ -13,7 +13,7 @@
 
 
 ## Screenshot of main game
-![Screenshot](/butterfly-speedgame/src/assets/mainGame.png)
+![Screenshot](/[butterfly-speedgame/src/assets/mainGame.png](https://github.com/JuthyNadi-a/Butterfly_SpeedGame/blob/main/src/assets/gameOver.png))
 
 ## Screenshot of game over
-![Screenshot](/butterfly-speedgame/src/assets/gameOver.png)
+![Screenshot]([/butterfly-speedgame/src/assets/gameOver.png](https://github.com/JuthyNadi-a/Butterfly_SpeedGame/blob/main/src/assets/mainGame.png))
