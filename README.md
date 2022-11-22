@@ -13,7 +13,7 @@
 
 
 ## Screenshot of main game
-![Screenshot](Screenshot 2022-11-22 at 3.46.36.png)
+![Screenshot](/Users/s2200733/Documents/Screenshot 2022-11-22 at 3.46.36.png)
 
 ## Screenshot of game over
-![Screenshot](Screenshot 2022-11-22 at 3.43.35.png)
+![Screenshot](/Users/s2200733/Documents/Screenshot 2022-11-22 at 3.43.35.png)
