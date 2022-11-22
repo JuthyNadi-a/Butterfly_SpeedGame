@@ -13,7 +13,7 @@
 
 
 ## Screenshot of main game
-![Screenshot](/Users/s2200733/Documents/Screenshot 2022-11-22 at 3.46.36.png)
+![Screenshot](/butterfly-speedgame/src/assets/mainGame.png)
 
 ## Screenshot of game over
-![Screenshot](/Users/s2200733/Documents/Screenshot 2022-11-22 at 3.43.35.png)
+![Screenshot](/butterfly-speedgame/src/assets/gameOver.png)
