@@ -5,11 +5,11 @@
     height: 300px;
     width: 300px;
     background: linear-gradient(#f0efeefa, #5e5c5bdb);
-    box-shadow: 3px 3px 3px 3px rgb(5, 66, 83);
+    box-shadow: 3px 3px 3px 3px rgb(2, 33, 48);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .active {
-    background: url('assets/images1.jpeg') no-repeat center center/cover;
+    background: url('assets/butterfly.jpg&h=768&w=1024&mode=fill&bg=ffffff&v=0') no-repeat center center/cover;
 }

@@ -16,33 +16,15 @@ function getRndInteger(min, max){
 class App extends Component {
   state = {
     circles: [1,2,3,4],
-    score: 0,
     current: undefined,
+    score: 0,
     speed: 1000,
+    count: 0,
+    rounds: 3,
     gameOver:false,
-    rounds: 0,
     gameOn:false,
   }
   timer;
-  nextCircle = () => {
-    if(this.state.rounds >= 3) {
-      this.endGameHandler();
-      return;
-    }
-
-    let nextActive;
-    do {
-      nextActive = getRndInteger(0,this.state.circles.length-1)
-    } while (nextActive === this.state.current)
-    this.setState ({
-      current: nextActive,
-      speed: this.state.speed * .95,
-      rounds: this.state.rounds + 1
-    })
-
-    this.timer = setTimeout(this.nextCircle, this.state.speed) 
-  }
-
   clickPlay = () => {
     if (clickSound.paused) {
       clickSound.play();
@@ -55,18 +37,45 @@ class App extends Component {
       this.clickPlay();
 
       if(this.state.current !== i) {
+
+        if((this.state.rounds - this.state.count) === 0) {
+              this.endGameHandler();
+              return;
+            } /* stops the function otherwise it would update score */
+            
         this.setState ({
           rounds: this.state.rounds - 1
         })
-        this.endGameHandler();
-        return; /* stops the function otherwise it would update score */
+
+            
+      } 
+      else {
+        this.setState ({
+          score: this.state.score + 1,
+          count: this.state.count - 1,
+        })
       }
-      this.setState ({
-        score: this.state.score + 1,
-        rounds: 0,
-      })
     }
   }
+  nextCircle = () => {
+    let nextActive;
+    if(this.state.count >= 3) {
+      this.endGameHandler();
+      return;
+    }
+
+    do {
+      nextActive = getRndInteger(0,this.state.circles.length-1);
+    } while (nextActive === this.state.current)
+    
+    this.setState ({
+      current: nextActive,
+      speed: this.state.speed * .95,
+      count: this.state.count + 1,
+    })
+    this.timer = setTimeout(this.nextCircle, this.state.speed) 
+  }
+
   showModal = () => {
     if (this.state.score === 1) {
       this.setState ({
@@ -110,26 +119,38 @@ class App extends Component {
     gameEndSound.play()
     clearTimeout(this.timer);
     this.setState({
-      gameOn: true,
+      gameOn: false,
       gameOver: !this.state.gameOver,
+      rounds: 3,
     })
   }
   closeHandler = () => {
-    /* this.setState({
-      gameOver: !this.state.gameOver,
-    }) */
-    window.location.reload()
+    window.location.reload();
+  }
+  soundOff = () => {
+      clickSound.pause();
+      gameStartSound.pause();
+      gameEndSound.pause();
   }
   render() {
     return (
      
       <div className="App">
+      <header>
+        <p>Lives: {this.state.rounds - this.state.count}</p>
+        <p>Misses: {this.state.count}</p>
+        <p onClick= {this.soundOff}>
+          <span className="material-symbols-outlined mute">
+          music_off
+          </span>
+        </p>
+      </header>
       <h1>Speed game</h1>
       <p>Your score: {this.state.score}</p>
       <div className="circles">
         {this.state.circles.map((circle,i) => (
           <Circle key={i} click={() => this.clickHandler(i)} 
-            active ={this.state.current === i}/>
+            active = {this.state.current === i}/>
         ))
         }
         <div>
@@ -139,8 +160,10 @@ class App extends Component {
           />}
         </div>
       </div>
+      <div>
       {!this.state.gameOn && <button onClick={this.startGameHandler} id='start'>Start</button>}
       {this.state.gameOn && <button onClick={this.endGameHandler} id='end'>End</button>}
+      </div>
     </div>
       
     );

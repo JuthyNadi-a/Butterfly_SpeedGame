@@ -1,9 +1,19 @@
 .App {
   text-align: center;
 }
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+.mute {
+  font-size: 4rem;
+}
 h1 {
-  padding-top: 7vh;
-  font-size: 7vh;
+  font-size: 5vh;
+  padding-top: 0;
 }
 p{
   font-size: 4vh;
