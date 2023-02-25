@@ -1,5 +1,11 @@
 # Speed Game
 
+##Tools & Technologies
+
+- React
+- Javascript
+- Github
+
 ## Features
 
  - start game with start button
