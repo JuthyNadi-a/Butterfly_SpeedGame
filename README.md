@@ -1,6 +1,6 @@
 # Speed Game
 
-##Tools & Technologies
+## Tools & Technologies
 
 - React
 - Javascript
